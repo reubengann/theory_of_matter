@@ -192,7 +192,7 @@ Invoke-Checked -Command $uv -Arguments @(
 )
 $buildPython = Get-VenvExecutable -Venv $buildVenv -Name "python"
 $buildBin = Join-Path $buildVenv $venvBinDirectory
-$env:Path = "$buildBin$([IO.Path]::PathSeparator)$env:Path"
+$env:PATH = "$buildBin$([IO.Path]::PathSeparator)$env:PATH"
 Invoke-Checked -Command $uv -Arguments @(
     "pip",
     "install",
@@ -296,7 +296,7 @@ if (-not $SkipSmokeTest) {
     )
 
     $resolveBin = Join-Path $resolveVenv $venvBinDirectory
-    $env:Path = "$resolveBin$([IO.Path]::PathSeparator)$env:Path"
+    $env:PATH = "$resolveBin$([IO.Path]::PathSeparator)$env:PATH"
     $jupyter = Get-VenvExecutable -Venv $resolveVenv -Name "jupyter"
     $previousErrorActionPreference = $ErrorActionPreference
     $ErrorActionPreference = "Continue"
