@@ -222,7 +222,7 @@ Invoke-Checked -Command $npm -Arguments @("run", "build:ui") -WorkingDirectory $
 foreach ($source in $extensionRepos) {
     $repoPath = Join-Path $RepoRoot $source.name
     Write-Host "Building prebuilt JupyterLab assets for $($source.name)..."
-    Invoke-Checked -Command $jlpm -Arguments @("install") -WorkingDirectory $repoPath
+    Invoke-Checked -Command $jlpm -Arguments @("install", "--immutable") -WorkingDirectory $repoPath
     Invoke-Checked -Command $jlpm -Arguments @("clean:all") -WorkingDirectory $repoPath
     Invoke-Checked -Command $jlpm -Arguments @("build:prod") -WorkingDirectory $repoPath
 }
