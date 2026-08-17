@@ -1,0 +1,60 @@
+{
+  "repositories": [
+    {
+      "name": "matterlib",
+      "url": "https://github.com/reubengann/matterlib.git",
+      "ref": "master",
+      "buildWheel": true,
+      "buildJupyterLabExtension": false,
+      "buildEquationForge": false
+    },
+    {
+      "name": "equation-forge",
+      "url": "https://github.com/reubengann/equation-forge.git",
+      "ref": "master",
+      "buildWheel": false,
+      "buildJupyterLabExtension": false,
+      "buildEquationForge": true
+    },
+    {
+      "name": "jupyterlab-sympy-assistant",
+      "url": "https://github.com/reubengann/jupyterlab-sympy-assistant.git",
+      "ref": "master",
+      "buildWheel": true,
+      "buildJupyterLabExtension": true,
+      "buildEquationForge": false
+    },
+    {
+      "name": "jupyterlab_math_notebook_tools",
+      "url": "https://github.com/reubengann/jupyterlab_math_notebook_tools.git",
+      "ref": "master",
+      "buildWheel": true,
+      "buildJupyterLabExtension": true,
+      "buildEquationForge": false
+    },
+    {
+      "name": "jupyterlab-equation-forge",
+      "url": "https://github.com/reubengann/jupyterlab-equation-forge.git",
+      "ref": "master",
+      "buildWheel": true,
+      "buildJupyterLabExtension": true,
+      "buildEquationForge": false
+    },
+    {
+      "name": "jupyterlab-excalidraw",
+      "url": "https://github.com/reubengann/jupyterlab-excalidraw.git",
+      "ref": "master",
+      "buildWheel": true,
+      "buildJupyterLabExtension": true,
+      "buildEquationForge": false
+    },
+    {
+      "name": "jupyterlab-find-in-folder",
+      "url": "https://github.com/reubengann/jupyterlab-find-in-folder.git",
+      "ref": "master",
+      "buildWheel": true,
+      "buildJupyterLabExtension": true,
+      "buildEquationForge": false
+    }
+  ]
+}

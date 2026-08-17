@@ -1,0 +1,16 @@
+mjx-container.MathJax[display="true"] {
+  text-align: left !important;
+  margin-left: 1em !important;
+  margin-right: auto !important;
+  /* Leave room for the left margin so the cell does not overflow horizontally. */
+  width: calc(100% - 1em) !important;
+}
+
+/* Force labeled equations (with numbers) to left-align */
+mjx-mtable[side="right"] {
+  text-align: left !important;
+}
+
+mjx-table {
+  margin-left: 0 !important;
+}

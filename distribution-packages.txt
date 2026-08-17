@@ -1,0 +1,8 @@
+# Local Python distributions included in the offline bundle.
+# Runtime dependencies are declared in requirements.in and in these projects.
+matterlib
+jupyterlab_sympy_assistant
+jupyterlab_math_notebook_tools
+jupyterlab_equation_forge
+jupyterlab_excalidraw
+jupyterlab_find_in_folder

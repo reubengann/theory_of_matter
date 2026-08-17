@@ -1,0 +1,9 @@
+# Direct notebook/runtime dependencies for theory-of-matter.
+# Local projects are listed in distribution-packages.txt.
+ipython>=8
+ipykernel>=6
+jupyterlab>=4,<5
+matplotlib>=3.8
+matplotlib-inline>=0.1.6
+sympy>=1.12
+numpy>=1.26
