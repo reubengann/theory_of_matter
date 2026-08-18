@@ -16,6 +16,40 @@ Recipients do not need git, Node.js, npm, conda, or a preinstalled Python.
 The first install needs internet access only if `uv` or CPython must be
 downloaded. Python packages are always installed from the archive.
 
+
+## Install
+
+Extract the archive into a writable folder without moving its internal files.
+
+Windows:
+
+```powershell
+./install.ps1
+./run-jupyter.ps1
+```
+
+Linux or macOS:
+
+```bash
+bash install.sh
+./run-jupyter.sh
+```
+
+The installer verifies the wheel manifest, installs the recorded CPython
+version through `uv`, recreates `.venv`, installs strictly from the bundled
+wheelhouse, and runs `uv pip check`.
+
+## Package selection
+
+Direct runtime dependencies are in `requirements.in`. Local Python projects
+included in the archive are in `distribution-packages.txt`. Source repository
+locations and refs are in `sources.json`.
+
+Repository-owned runtime configuration is kept as flat source files under
+`assets/`. The builder maps those files into Jupyter and IPython's required
+directory structure inside each finished archive.
+
+
 ## Supported bundles
 
 - Windows x64
@@ -70,35 +104,3 @@ pwsh ./scripts/checkout-sources.ps1 -RepoRoot /path/to/repos
 
 Artifacts are written to `dist/`. Use `-PythonVersion` to select another
 Python minor version and `-SkipSmokeTest` only for diagnostic builds.
-
-## Install
-
-Extract the archive into a writable folder without moving its internal files.
-
-Windows:
-
-```powershell
-./install.ps1
-./run-jupyter.ps1
-```
-
-Linux or macOS:
-
-```bash
-bash install.sh
-./run-jupyter.sh
-```
-
-The installer verifies the wheel manifest, installs the recorded CPython
-version through `uv`, recreates `.venv`, installs strictly from the bundled
-wheelhouse, and runs `uv pip check`.
-
-## Package selection
-
-Direct runtime dependencies are in `requirements.in`. Local Python projects
-included in the archive are in `distribution-packages.txt`. Source repository
-locations and refs are in `sources.json`.
-
-Repository-owned runtime configuration is kept as flat source files under
-`assets/`. The builder maps those files into Jupyter and IPython's required
-directory structure inside each finished archive.
