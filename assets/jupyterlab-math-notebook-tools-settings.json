@@ -1,4 +1,6 @@
 {
+  "captureModeEnabled": false,
+  "captureModeScale": 2,
   "enableBoldVectorMacro": true,
   "mathMacros": {},
   "renderedSearchDebounceMs": 150
