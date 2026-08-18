@@ -65,9 +65,16 @@ Open **Actions → Build distributions → Run workflow**. The workflow checks o
 the public repositories declared in `sources.json`, builds and smoke-tests all
 three platforms, and publishes ZIP files as workflow artifacts.
 
-Builds also run when this repository's default branch changes. A
-`repository_dispatch` event with type `dependency-updated` can trigger a build
-later if dependency repositories are configured to send one.
+Ordinary branch pushes do not build distributions. Push a version tag to start
+a versioned build:
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+A `repository_dispatch` event with type `dependency-updated` can also trigger a
+build later if dependency repositories are configured to send one.
 
 `sources.json` accepts a branch, tag, or commit SHA in each `ref`. The resolved
 commit for every repository is written to the bundle's
