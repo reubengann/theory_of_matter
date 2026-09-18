@@ -7,8 +7,6 @@ import numpy as np
 
 from matterlib import spp
 
-plt.rcParams["mathtext.fontset"] = "dejavuserif"
-
 
 def setup_matplotlib(
     *,
@@ -49,6 +47,8 @@ def setup_matplotlib(
             "figure.autolayout": True,
         }
     )
+
+    plt.rcParams["mathtext.fontset"] = "dejavuserif"
 
 
 setup_matplotlib()
