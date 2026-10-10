@@ -48,7 +48,12 @@ def setup_matplotlib(
         }
     )
 
-    plt.rcParams["mathtext.fontset"] = "dejavuserif"
+    plt.rcParams.update(
+        {
+            "font.family": "STIXGeneral",
+            "mathtext.fontset": "stix",
+        }
+    )
 
 
 setup_matplotlib()
